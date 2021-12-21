@@ -7,12 +7,17 @@ fn read(input: &mut String) {
 
 fn main() {
     
+    const WEAPON: [u8; 3] = [1, 2, 3];
     let mut input = String::new();
 
     welcoming();
     read(&mut input);
 
-    println!("{}", input);
+    // Parse input to integer
+    let input = input.to_string().trim().parse::<u8>().expect("Failed to cast input");
+
+    // Get bot choice
+    
 }
 
 fn welcoming() {
