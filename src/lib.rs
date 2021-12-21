@@ -23,10 +23,22 @@ pub fn wish_exit(exit: &str) -> bool {
     false
 }
 
-pub fn print_result(result: &str, human: &u8, bot: &u8) {
+pub fn print_result(result: &str, human: u8, bot: u8) {
     println!("
 You choose : {}
 Bot choose : {}
 Result     : {}
------------------\n", human, bot, result);
+-----------------\n", transform_int(human), transform_int(bot), result);
+}
+
+fn transform_int(n: u8) -> String {
+    if n == (1 as u8) {
+        "Rock".to_owned()
+    } else if n == (2 as u8) {
+        "Paper".to_owned()
+    } else if n == (3 as u8) {
+        "Scissor".to_owned()
+    } else {
+        "Unknown Weapon".to_owned()
+    }
 }
