@@ -10,9 +10,15 @@ fn main() {
         welcoming();
         read(&mut input);
         
+        // Check is user just enter the input
+        if &input == "\n" {
+            println!();
+            continue;
+        }
+
         // Parse input to integer
         let input = input.to_string().trim().parse::<u8>().expect("Failed to cast input");
-
+        
         match input {
             1 | 2 | 3 => (),
             _ => {
