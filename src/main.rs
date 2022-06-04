@@ -11,10 +11,10 @@ fn main() {
         read(&mut input);
         
         // Check is user just enter the input || is not a number
-        if &input == "\n" || !input.clone().contains("1234567890") {
-            println!();
-            continue;
-        }
+//         if &input == "\n" || !input.clone().contains("1234567890") {
+//             println!();
+//             continue;
+//         }
 
         // Parse input to integer
         let input = input.to_string().trim().parse::<u8>().expect("Failed to cast input");
